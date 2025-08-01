@@ -1,0 +1,57 @@
+```mermaid
+---
+title: Simple Infrastructure Examples
+---
+
+flowchart LR
+    subgraph "Basic Web App"
+        U[Users] --> LB[Load Balancer]
+        LB --> WS1[Web Server 1]
+        LB --> WS2[Web Server 2]
+        WS1 --> DB[(Database)]
+        WS2 --> DB
+    end
+```
+
+---
+
+```mermaid
+graph TD
+    subgraph "Three-Tier Architecture"
+        subgraph "Presentation Tier"
+            UI[Web Interface]
+        end
+        
+        subgraph "Application Tier"
+            API[API Server]
+            BL[Business Logic]
+        end
+        
+        subgraph "Data Tier"
+            DB[(Database)]
+            CACHE[(Cache)]
+        end
+        
+        UI --> API
+        API --> BL
+        BL --> DB
+        BL --> CACHE
+    end
+```
+
+---
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant W as Web App
+    participant A as API
+    participant D as Database
+    
+    U->>W: Request page
+    W->>A: Fetch data
+    A->>D: Query
+    D-->>A: Results
+    A-->>W: JSON response
+    W-->>U: Rendered page
+```

@@ -4,18 +4,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This appears to be a new/empty project directory named "claude-mermaid". The project structure and dependencies are not yet established.
+This project uses Mermaid.js for creating cloud infrastructure diagrams. Diagrams are stored as `.mmd` files in the `/diagrams` folder and can be viewed/edited using the Mermaid Chart VS Code extension.
 
-## Common Commands
+## VS Code Extension Setup
 
-Since this is a new project without a package.json or build configuration, standard commands will need to be established based on the technology stack chosen during development.
+1. Install "Mermaid Chart" extension from VS Code marketplace
+2. Open any `.mmd` file in the `/diagrams` folder
+3. Use Command Palette → "Mermaid: Preview Diagram" to view diagrams
+4. For AI-powered diagram generation: use `@mermaid-chart /generate_cloud_architecture_diagram` in GitHub Copilot Chat
 
-## Architecture
+## Diagram Files
 
-The project architecture will be defined as development progresses and files are added to the repository.
+- `/diagrams/getting-started.mmd` - Basic tutorial diagram
+- `/diagrams/simple-examples.mmd` - Common infrastructure patterns
 
-## Notes
+## Usage
 
-- This is a new project with no existing files or configuration
-- Development setup and build processes should be established based on project requirements
-- Once package.json or other configuration files are added, this file should be updated with relevant build, test, and development commands
+- Create new `.mmd` files in `/diagrams` folder
+- Use Mermaid syntax for flowcharts, architecture diagrams, sequence diagrams
+- AI features require login to Mermaid Chart service
