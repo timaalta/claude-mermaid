@@ -1,0 +1,24 @@
+---
+title: Three-Tier Architecture
+---
+graph TD
+    subgraph "Three-Tier Architecture"
+        subgraph "Presentation Tier"
+            UI[Web Interface]
+        end
+        
+        subgraph "Application Tier"
+            API[API Server]
+            BL[Business Logic]
+        end
+        
+        subgraph "Data Tier"
+            DB[(Database)]
+            CACHE[(Cache)]
+        end
+        
+        UI --> API
+        API --> BL
+        BL --> DB
+        BL --> CACHE
+    end
